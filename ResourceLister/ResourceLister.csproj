@@ -61,7 +61,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourcesLister\AssetsFile.cs" />
-    <Compile Include="ResourcesLister\AssetsFileHeader.cs" />
     <Compile Include="ResourcesLister\DataReader.cs" />
     <Compile Include="ResourcesLister\GlobalGameManagersAssetsFile.cs" />
   </ItemGroup>

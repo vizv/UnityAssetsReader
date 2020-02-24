@@ -12,6 +12,7 @@ namespace ResourceLister
         {
             var globalGameManagersAssetsFile = new GlobalGameManagersAssetsFile();
             Console.WriteLine(string.Join("\n", globalGameManagersAssetsFile.ResourceList));
+            Console.ReadKey();
         }
     }
 }

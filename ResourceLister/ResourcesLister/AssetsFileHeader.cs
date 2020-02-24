@@ -4,9 +4,12 @@ namespace ResourceLister
 {
     internal class AssetsFileHeader
     {
-        public uint MetadataSize;
-        public uint FileSize;
-        public uint Version;
-        public uint DataOffset;
+        internal uint MetadataSize;
+        internal uint FileSize;
+        internal uint Version;
+        internal uint DataOffset;
+        internal byte Endianness;
+        internal string UnityVersion;
+        internal int TargetPlatform;
     }
 }

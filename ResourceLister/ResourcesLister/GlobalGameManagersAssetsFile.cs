@@ -9,7 +9,7 @@ namespace ResourceLister
     internal class GlobalGameManagersAssetsFile : AssetsFile
     {
         internal string[] ResourceList {
-            get { throw new NotImplementedException(); }
+            get { return new string[0]; }
         }
 
         internal GlobalGameManagersAssetsFile() : base("globalgamemanagers.assets") { }

@@ -24,8 +24,7 @@ namespace ResourceLister
                 var resource = new Resource() { Path = Encoding.Default.GetString(reader.ReadBytes(pathLength)) };
                 reader.Align(4);
                 resource.FileID = reader.ReadInt32();
-                resource.PathID = reader.ReadInt32();
-                reader.Skip(4);
+                resource.PathID = reader.ReadInt64();
                 resources.Add(resource);
                 //Console.WriteLine($"{resource.Path}[{pathLength}]: {resource.FileID} / {resource.PathID}");
             }
@@ -35,7 +34,7 @@ namespace ResourceLister
         {
             internal string Path;
             internal int FileID;
-            internal int PathID;
+            internal long PathID;
         }
     }
 }

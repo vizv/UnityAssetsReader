@@ -78,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AssetsReader\AssetsReader.csproj">
-      <Project>{7d2eb916-38e9-4096-82ac-e61bf3f2c088}</Project>
+      <Project>{39c36d1a-ca1a-452b-8339-d91c16e6fdd8}</Project>
       <Name>AssetsReader</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AssetsReader;
 
 namespace ResourceLister
 {
@@ -10,7 +7,7 @@ namespace ResourceLister
     {
         static void Main()
         {
-            var globalGameManagersAssetsFile = new GlobalGameManagersAssetsFile();
+            var globalGameManagersAssetsFile = new GlobalGameManagersAssetsFile("globalgamemanagers");
             Console.WriteLine(string.Join("\n", globalGameManagersAssetsFile.ResourceList));
             Console.ReadKey();
         }

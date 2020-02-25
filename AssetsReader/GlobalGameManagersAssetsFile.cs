@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ResourceLister
+namespace AssetsReader
 {
-    internal class GlobalGameManagersAssetsFile : AssetsFile
+    public class GlobalGameManagersAssetsFile : AssetsFile
     {
         private ObjectInfo ResourceInfo => objectInfos.First(objectInfo => objectInfo.ClassID == 0x93);
 
-        protected List<Resource> resources;
+        private readonly List<Resource> resources;
 
-        internal string[] ResourceList => resources.Select(resource => resource.Path).ToArray();
+        public string[] ResourceList => resources.Select(resource => resource.Path).ToArray();
 
-        internal GlobalGameManagersAssetsFile() : base("globalgamemanagers") {
+        public GlobalGameManagersAssetsFile(string fileName) : base(fileName) {
             reader.Seek(ResourceInfo.Start);
             var resourcesCount = reader.ReadInt32();
             resources = new List<Resource>(resourcesCount);
@@ -30,7 +28,7 @@ namespace ResourceLister
             }
         }
 
-        internal class Resource
+        public class Resource
         {
             internal string Path;
             internal int FileID;

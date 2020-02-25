@@ -3,9 +3,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ResourceLister
+namespace AssetsReader
 {
-    internal class DataReader
+    public class DataReader
     {
         private readonly BinaryReader reader;
         public Endian Endianness = Endian.Big;
@@ -60,7 +60,7 @@ namespace ResourceLister
         }
 
 
-        internal enum Endian { Little, Big }
+        public enum Endian { Little, Big }
 
         private ByteArray Read(int count)
         {

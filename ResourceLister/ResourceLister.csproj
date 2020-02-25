@@ -60,9 +60,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResourcesLister\AssetsFile.cs" />
-    <Compile Include="ResourcesLister\DataReader.cs" />
-    <Compile Include="ResourcesLister\GlobalGameManagersAssetsFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -78,6 +75,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AssetsReader\AssetsReader.csproj">
+      <Project>{7d2eb916-38e9-4096-82ac-e61bf3f2c088}</Project>
+      <Name>AssetsReader</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

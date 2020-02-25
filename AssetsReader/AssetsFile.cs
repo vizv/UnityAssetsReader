@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-
-namespace ResourceLister
+namespace AssetsReader
 {
-    internal class AssetsFile
+    public class AssetsFile
     {
         protected DataReader reader;
         protected Header header;
         protected List<Type> types;
         protected List<ObjectInfo> objectInfos;
 
-        public AssetsFile(string fileName)
+        internal AssetsFile(string fileName)
         {
             reader = new DataReader(File.OpenRead(fileName));
 
@@ -76,7 +74,7 @@ namespace ResourceLister
             // TODO: I don't care... for now
         }
 
-        internal class Header
+        protected class Header
         {
             internal uint MetadataSize;
             internal uint FileSize;
@@ -89,7 +87,7 @@ namespace ResourceLister
             internal bool EnableTypeTree;
         }
 
-        internal class Type
+        protected class Type
         {
             internal int ClassID;
             internal bool IsStrippedType;
@@ -97,7 +95,7 @@ namespace ResourceLister
             internal byte[] OldTypeHash; // Hash128
         }
 
-        internal class ObjectInfo
+        protected class ObjectInfo
         {
             internal AssetsFile AssetsFile { get; }
 
